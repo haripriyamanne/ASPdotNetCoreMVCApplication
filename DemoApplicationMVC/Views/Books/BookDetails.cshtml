@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Books Details Page";
+    ViewData["Heading"] = "List of Books";
+    var BookDetails = ViewData["Books"] as BookModel; //typecasting
+}
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+<h1>@ViewData["Heading"]</h1>
+<p>
+    Book Id = <b>@BookDetails.BookId</b>
+    Book Name = <b>@BookDetails.BookName</b>
+    Book Author = <b>@BookDetails.BookAuthor</b>
+</p>
+

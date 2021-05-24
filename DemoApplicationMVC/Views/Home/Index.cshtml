@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    ViewData["Heading"] = "Welcome to Libaray Management System";
+}
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+<div class="text-center">
+    <h1>@ViewData["Heading"]</h1>
+    <ol>
+        @foreach (string items in ViewBag.LibraryItems)
+        {
+            <li>
+                @items
+            </li>
+        }
+
+    </ol>
+</div>
+<h1>Using View Data</h1>
+<ul>
+    @foreach (string student in ViewData["Student"] as List<string>)
+    {
+        <li>@student</li>
+    }
+</ul>
+<h1>Using Temp Data</h1>
+<ul>
+    @foreach (var student in TempData["Students"] as List<string>)
+    {
+        <li>@student</li>
+    }
+</ul>
+
