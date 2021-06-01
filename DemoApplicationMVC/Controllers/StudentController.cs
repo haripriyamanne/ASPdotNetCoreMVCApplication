@@ -14,7 +14,11 @@ namespace DemoApplicationMVC.Controllers
         //{
         //    return View();
         //}
-        private readonly StudentRepository studentRepository=null;
+        //public string StudentDetails(int id)
+        //{
+        //    return $"Student id {id}";
+        //}
+        private readonly StudentRepository studentRepository;
         public StudentController()
         {
             studentRepository = new StudentRepository();

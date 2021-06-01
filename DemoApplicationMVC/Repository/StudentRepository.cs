@@ -34,8 +34,5 @@ namespace DemoApplicationMVC.Repository
             };
         }
 
-
-
-
     }
 }

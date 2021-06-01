@@ -18,6 +18,8 @@ namespace DemoApplicationMVC.Controllers
             _logger = logger;
         }
 
+    
+
         public IActionResult Index()
         {
             ViewBag.LibraryItems = new List<string>() //using view Bag
@@ -47,13 +49,24 @@ namespace DemoApplicationMVC.Controllers
         
         public IActionResult Privacy()
         {
-            return View();
+            return View("hh");
         }
-
-        public IActionResult About()
+        public IActionResult hh()
         {
             return View();
         }
+        public IActionResult Delete()
+        {
+            return View();
+        }
+
+
+        public IActionResult About()
+        {
+            var obj = new { Id = 1, Name = "vamshi" };
+            return View(obj);
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

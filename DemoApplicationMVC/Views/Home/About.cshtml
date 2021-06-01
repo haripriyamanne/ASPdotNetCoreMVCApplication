@@ -1,5 +1,64 @@
-﻿@{ 
+﻿@{
     ViewData["Name"] = "Welcome to About Page";
 }
 
 <h1>@ViewData["Name"]</h1>
+
+<h1>@DateTime.Now</h1>
+<h1>@DateTime.Now.ToString("dd-mm-yy")</h1>
+<h1>Sum=@(3+4)</h1>
+@{
+    int a = 4;
+    int b = 3;
+    int sum = a + b;
+}
+<h1>Addition of 2 numbers @sum</h1>
+<h1>haripriyamanne@cognine.com</h1>
+<h1>Twitter -@@twitter.com</h1>
+@{
+    int m = 10;
+}
+@if (m < 5)
+{
+    <h1>Hello if</h1>
+}
+else
+{
+    <h1>this else</h1>
+}
+
+@{
+    int h = 90;
+    int g;
+}
+<h1>Ternary operator @(h==10?g=10:g=5)</h1>
+<h1>value of g =@g </h1>
+
+@{
+    int l = 2;
+}
+@switch (l)
+{
+    case 1:<h1>Iam case1</h1>
+        break;
+    case 2:<h1> Iam case2 </h1>
+        break;
+    default:<h1>Iam default</h1>
+        break;
+}
+
+@for (int i = 0; i < 10; i++)
+{
+    <h1>Welcome to book store @i</h1>
+}
+
+@{
+    var list = new List<int>() { 1, 2, 3, 4, 5 };
+}
+@foreach (var item in list)
+{
+    <h1>@item</h1>
+}
+
+<img src="~/Images/haripriya.png" />
+<img src="~/vamshi/vam.png" />
